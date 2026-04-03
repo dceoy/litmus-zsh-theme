@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="340">
+  <style>
+    .bg { fill: #1e1e2e; }
+    .titlebar { fill: #313244; }
+    .titletext { fill: #cdd6f4; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; }
+    .btn-close { fill: #f38ba8; }
+    .btn-min { fill: #f9e2af; }
+    .btn-max { fill: #a6e3a1; }
+    .t { font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, monospace; font-size: 13px; }
+    .blue { fill: #89b4fa; }
+    .cyan { fill: #89dceb; }
+    .magenta { fill: #cba6f7; }
+    .green { fill: #a6e3a1; }
+    .white { fill: #cdd6f4; }
+    .dim { fill: #6c7086; }
+    .bold { font-weight: bold; }
+  </style>
+  <!-- Window frame -->
+  <rect class="bg" width="680" height="340" rx="10" ry="10"/>
+  <rect class="titlebar" width="680" height="36" rx="10" ry="10"/>
+  <rect class="titlebar" y="20" width="680" height="16"/>
+  <!-- Traffic lights -->
+  <circle class="btn-close" cx="20" cy="18" r="6"/>
+  <circle class="btn-min" cx="40" cy="18" r="6"/>
+  <circle class="btn-max" cx="60" cy="18" r="6"/>
+  <text class="titletext" x="310" y="22" text-anchor="middle">user@local — zsh</text>
+
+  <!-- Line 1: local prompt (cyan) with git clean -->
+  <text y="68" class="t">
+    <tspan x="16" class="blue bold">[2026-04-03 14:32:07]</tspan>
+    <tspan class="cyan bold"> $ </tspan>
+    <tspan class="white">echo "hello litmus"</tspan>
+  </text>
+  <text y="68" class="t" text-anchor="end">
+    <tspan x="664" class="cyan">main</tspan>
+    <tspan class="blue">✔</tspan>
+    <tspan class="cyan"> [user@local:~/project]</tspan>
+  </text>
+
+  <!-- Line 2: output -->
+  <text y="92" class="t">
+    <tspan x="16" class="white">hello litmus</tspan>
+  </text>
+
+  <!-- Line 3: local prompt (cyan) with git dirty -->
+  <text y="124" class="t">
+    <tspan x="16" class="blue bold">[2026-04-03 14:32:15]</tspan>
+    <tspan class="cyan bold"> $ </tspan>
+    <tspan class="white">git status</tspan>
+  </text>
+  <text y="124" class="t" text-anchor="end">
+    <tspan x="664" class="cyan">dev</tspan>
+    <tspan class="green">✗</tspan>
+    <tspan class="cyan"> [user@local:~/project]</tspan>
+  </text>
+
+  <!-- Line 4-5: git output -->
+  <text y="148" class="t">
+    <tspan x="16" class="white">On branch dev</tspan>
+  </text>
+  <text y="172" class="t">
+    <tspan x="16" class="white">Changes not staged for commit:</tspan>
+  </text>
+
+  <!-- Separator -->
+  <text y="204" class="t">
+    <tspan x="16" class="dim">───── SSH session ─────</tspan>
+  </text>
+
+  <!-- Line 6: SSH prompt (magenta) with git clean -->
+  <text y="236" class="t">
+    <tspan x="16" class="blue bold">[2026-04-03 14:33:42]</tspan>
+    <tspan class="magenta bold"> $ </tspan>
+    <tspan class="white">ls -la</tspan>
+  </text>
+  <text y="236" class="t" text-anchor="end">
+    <tspan x="664" class="magenta">main</tspan>
+    <tspan class="blue">✔</tspan>
+    <tspan class="magenta"> [user@server:~/app]</tspan>
+  </text>
+
+  <!-- Line 7: SSH root prompt (magenta) -->
+  <text y="268" class="t">
+    <tspan x="16" class="blue bold">[2026-04-03 14:34:01]</tspan>
+    <tspan class="magenta bold"> # </tspan>
+    <tspan class="white">whoami</tspan>
+  </text>
+  <text y="268" class="t" text-anchor="end">
+    <tspan x="664" class="magenta">[root@server:/etc]</tspan>
+  </text>
+
+  <!-- Line 8: cursor -->
+  <text y="300" class="t">
+    <tspan x="16" class="blue bold">[2026-04-03 14:34:05]</tspan>
+    <tspan class="magenta bold"> $ </tspan>
+    <tspan class="white">▌</tspan>
+  </text>
+  <text y="300" class="t" text-anchor="end">
+    <tspan x="664" class="magenta">[user@server:~/app]</tspan>
+  </text>
+</svg>
