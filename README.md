@@ -1,17 +1,17 @@
 # litmus-zsh-theme
 
-A color-reactive Zsh theme — cyan for local, magenta for SSH, blue timestamps always ticking.
+A color-reactive Zsh theme sensing local or SSH connections.
 
 ![litmus-zsh-theme screenshot](img/screenshot.svg)
 
 ## Features
 
-- **Connection-aware colors** — prompt turns **cyan** on local sessions and **magenta** over SSH, so you always know where you are.
-- **Timestamps** — bold blue `[YYYY-MM-DD HH:MM:SS]` on every prompt line.
-- **Git integration** — current branch displayed in the right prompt with a **blue ✔** (clean) or **green ✗** (dirty) indicator.
-- **Root indicator** — prompt symbol switches from `$` to `#` when running as root.
-- **Error highlight** — prompt and working-directory text turn bold on non-zero exit status.
-- **Right prompt** — shows `[user@host:~/path]` alongside git info for full context without clutter on the left.
+- **Connection-aware colors**: prompt turns **cyan** on local sessions and **magenta** over SSH, so you always know where you are.
+- **Timestamps**: bold blue `[YYYY-MM-DD HH:MM:SS]` on every prompt line.
+- **Git integration**: current branch displayed in the right prompt with a **blue ✔** (clean) or **green ✗** (dirty) indicator.
+- **Root indicator**: prompt symbol switches from `$` to `#` when running as root.
+- **Error highlight**: prompt and working-directory text turn bold on non-zero exit status.
+- **Right prompt**: shows `[user@host:~/path]` alongside git info for full context without clutter on the left.
 
 ## Requirements
 
@@ -55,7 +55,7 @@ Copy `litmus.zsh-theme` into your Oh My Zsh custom themes directory:
 cp litmus.zsh-theme "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/"
 ```
 
-Then set `ZSH_THEME="litmus"` in `~/.zshrc` and reload.
+Then set `ZSH_THEME='litmus'` in `~/.zshrc` and reload.
 
 ## Prompt Layout
 
