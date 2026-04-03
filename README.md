@@ -19,18 +19,43 @@ A color-reactive Zsh theme — cyan for local, magenta for SSH, blue timestamps 
 
 ## Installation
 
+### Oh My Zsh
+
+1. Clone the repository into the Oh My Zsh custom themes directory:
+
+   ```sh
+   git clone https://github.com/dceoy/litmus-zsh-theme.git \
+     "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/litmus-zsh-theme"
+   ```
+
+2. Symlink the theme file:
+
+   ```sh
+   ln -sf "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/litmus-zsh-theme/litmus.zsh-theme" \
+     "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/litmus.zsh-theme"
+   ```
+
+3. Set the theme in `~/.zshrc`:
+
+   ```sh
+   ZSH_THEME="litmus"
+   ```
+
+4. Reload your shell:
+
+   ```sh
+   source ~/.zshrc
+   ```
+
+### Manual
+
+Copy `litmus.zsh-theme` into your Oh My Zsh custom themes directory:
+
 ```sh
-git clone https://github.com/dceoy/litmus-zsh-theme.git \
-  "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/litmus-zsh-theme"
-ln -sf "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/litmus-zsh-theme/litmus.zsh-theme" \
-  "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/litmus.zsh-theme"
+cp litmus.zsh-theme "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/"
 ```
 
-Set `ZSH_THEME="litmus"` in `~/.zshrc` and reload:
-
-```sh
-source ~/.zshrc
-```
+Then set `ZSH_THEME="litmus"` in `~/.zshrc` and reload.
 
 ## Prompt Layout
 
