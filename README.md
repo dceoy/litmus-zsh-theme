@@ -13,11 +13,28 @@ A color-reactive Zsh theme sensing local or SSH connections.
 - **Error highlight**: prompt and working-directory text turn bold on non-zero exit status.
 - **Right prompt**: shows `[user@host:~/path]` alongside git info for full context without clutter on the left.
 
+## Themes
+
+- `litmus.zsh`: standalone theme for Zsh without a framework.
+- `litmus.zsh-theme`: Oh My Zsh theme using its Git prompt helpers.
+
 ## Requirements
 
-- [Oh My Zsh](https://ohmyz.sh/)
+- [Zsh](https://www.zsh.org/)
+- [Git](https://git-scm.com/) for Git prompt information
+- [Oh My Zsh](https://ohmyz.sh/) only when using `litmus.zsh-theme`
 
 ## Installation
+
+### Standalone Zsh
+
+Clone the repository and source `litmus.zsh` from `~/.zshrc`:
+
+```sh
+git clone https://github.com/dceoy/litmus-zsh-theme.git ~/.config/litmus-zsh-theme
+printf '%s\n' 'source ~/.config/litmus-zsh-theme/litmus.zsh' >> ~/.zshrc
+source ~/.zshrc
+```
 
 ### Oh My Zsh
 
@@ -46,16 +63,6 @@ A color-reactive Zsh theme sensing local or SSH connections.
    ```sh
    source ~/.zshrc
    ```
-
-### Manual
-
-Copy `litmus.zsh-theme` into your Oh My Zsh custom themes directory:
-
-```sh
-cp litmus.zsh-theme "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/"
-```
-
-Then set `ZSH_THEME='litmus'` in `~/.zshrc` and reload.
 
 ## Prompt Layout
 
