@@ -16,9 +16,9 @@ _litmus_git_prompt() {
   branch="${branch//\%/%%}"
 
   if [[ -n "$(command git status --porcelain 2>/dev/null)" ]]; then
-    print -nr -- "%F{${_litmus_connection_color}}${branch}%F{green}✗%f"
+    print -nr -- "%(?::%B)%F{${_litmus_connection_color}}${branch}%F{green}✗%f%b"
   else
-    print -nr -- "%F{${_litmus_connection_color}}${branch}%F{blue}✔%f"
+    print -nr -- "%(?::%B)%F{${_litmus_connection_color}}${branch}%F{blue}✔%f%b"
   fi
 }
 
